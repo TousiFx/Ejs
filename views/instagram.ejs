@@ -1,19 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Instagram</title>
-  </head>
+<%-include("includes/head.ejs") %>
   <body>
-    <h2>This page belongs to @<%= username.replace(/\s/g, '') %></h2>
-    <h2><%= diceRoll %></h2>
-    <button> Follow </button>
-    <button> Message </button>
-    <ul>
-    <% for(let name of followers){%>
-        <li><%= name %></li>
-        <% }%>
-    </ul>
+    <h2>This page belongs to @<%= data.name %></h2>
+    <h2><%= %></h2>
+    <button>Follow</button>
+    <button>Message</button>
+    <br />
+    <br />
+    <span>Followers<%= data.followers%></span>
+    <span>Following<%= data.following%></span>
+    <%for(let posts of data.posts) { %>
+       <img src="<%=posts.img%>" alt="some images">
+       <span>Likes : <%= posts.likes%></span> <span> Comments : <%= posts.comments%></span>
+  <% }%>
   </body>
 </html>
+
+
+ 
