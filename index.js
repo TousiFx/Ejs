@@ -12,8 +12,9 @@ app.get("/", (req, res) => {
 });
 app.get("/ig/:username", (req, res) => {
   let { username } = req.params;
+  const followers = ["adam", "aman", "adnan", "zishan", "pawan", "raj"];
   let diceRoll = Math.floor(Math.random() * 6) + 1;
-  res.render("instagram", { username, diceRoll });
+  res.render("instagram", { username, diceRoll, followers });
 });
 app.get("/rolldice", (req, res) => {
   let diceRoll = Math.floor(Math.random() * 6) + 1;

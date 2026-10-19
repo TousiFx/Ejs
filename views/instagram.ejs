@@ -8,7 +8,12 @@
   <body>
     <h2>This page belongs to @<%= username.replace(/\s/g, '') %></h2>
     <h2><%= diceRoll %></h2>
-    <button>Follow</button>
-    <button>Message</button>
+    <button> Follow </button>
+    <button> Message </button>
+    <ul>
+    <% for(let name of followers){%>
+        <li><%= name %></li>
+        <% }%>
+    </ul>
   </body>
 </html>
