@@ -22,6 +22,9 @@ app.get("/rolldice", (req, res) => {
   let diceRoll = Math.floor(Math.random() * 6) + 1;
   res.render("rolldice", { diceRoll });
 });
+app.get("/blogs", (req, res) => {
+  res.render("blog");
+});
 app.listen(port, () => {
   console.log("the required comes from brower");
 });
